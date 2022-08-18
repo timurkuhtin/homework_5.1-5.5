@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>A-Level</title>
+    <link rel="icon" href="https://camo.githubusercontent.com/eb8b5f9caa4b4765b222e961729eadb775ac710b/68747470733a2f2f67617265766e612e6769746875622e696f2f6a732d73616d706c65732f696d616765732f612d6c6576656c2d69636f2e706e67" >
+</head>
+<body>
+    <script>
+        const func1 = () =>{
+            let result = 0;
+            return function(num){
+                result+=num;
+                console.log(result);
+            }
+        }
+        let counter = func1();
+
+        counter(3);
+        counter(5);
+        counter(228);
+        counter(1488);
+
+        //____________________________________
+
+        const func2 = () =>{
+            let result2 = [];
+            return function(num2){
+                if(num2==null){
+                    result2 = [];
+                    console.log(result2);
+                }
+                else{
+                result2.push(num2);
+                console.log(result2);
+                }
+            }
+        }
+        let counter2 = func2();
+
+        counter2(3);
+        counter2(5);
+        counter2({name: 'Vasya'});
+        counter2();
+        counter2(4);
+    </script>
+</body>
+</html>
